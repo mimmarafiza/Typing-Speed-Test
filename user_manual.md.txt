@@ -1,0 +1,260 @@
+# Typing Speed Test — User Manual
+
+**Version:** 1.0
+**Author:** Rafiza Mimma (ID: 11240321848)
+**Course:** CSE 2216 — Software Development I
+**Section:** 4B
+**Institution:** Northern University of Business & Technology, Khulna
+
+---
+
+## 1. Introduction
+
+Typing Speed Test is a Java desktop application that measures your
+typing speed (Words Per Minute) and accuracy in a 60-second timed
+challenge. It features four difficulty levels, real-time letter
+highlighting, a leaderboard, achievements, and progress tracking.
+
+The application is designed to help users:
+- Measure their typing speed accurately
+- Practice typing with instant feedback
+- Track improvement over multiple sessions
+- Compete with themselves through a personal leaderboard
+
+---
+
+## 2. System Requirements
+
+| Component | Minimum | Recommended |
+|-----------|---------|-------------|
+| Operating System | Windows 7 / macOS 10.13 / Linux | Windows 10+ |
+| Java Runtime | Java 11 (JRE) | Java 17 or higher (JDK) |
+| RAM | 4 GB | 8 GB |
+| Disk Space | 200 MB | 500 MB |
+| Display | 1024 × 768 | 1366 × 768 or higher |
+
+### How to Check If Java Is Installed
+
+Open Command Prompt (Windows) or Terminal (macOS/Linux) and type:
+
+    java -version
+
+You should see output like:
+
+    java version "17.0.2"
+    Java(TM) SE Runtime Environment
+
+If you see "command not found" or an error, download Java from:
+https://www.oracle.com/java/technologies/downloads/
+
+---
+
+## 3. Installation
+
+The application requires no installation.
+
+### Step 1: Locate the JAR File
+Find the file `TypingSpeedTestGame.jar` in the project's `dist/` folder.
+
+### Step 2: Run the Application
+
+**Option A — Double-click (easiest):**
+Just double-click the JAR file. The application window opens.
+
+**Option B — Command Line (most reliable):**
+1. Open Command Prompt / Terminal
+2. Navigate to the folder containing the JAR:
+   
+   cd path/to/folder
+   
+3. Run:
+
+   java -jar TypingSpeedTestGame.jar
+
+### Step 3: If Double-Click Doesn't Work
+
+Windows may not know which program opens JAR files.
+
+**Fix:**
+1. Right-click the JAR file
+2. Select "Open with" → "Java(TM) Platform SE binary"
+3. Check "Always use this app to open .jar files"
+4. Click OK
+
+---
+
+## 4. How to Play
+
+### Starting a Game
+
+1. From the Main Menu, choose a difficulty:
+
+   | Level | Word Length | Recommended For |
+   |-------|-------------|-----------------|
+   | Easy | 3–5 characters | Beginners |
+   | Medium | 6–8 characters | Intermediate |
+   | Hard | 9–12 characters | Advanced |
+   | Expert | 13+ characters | Expert typists |
+
+2. The game begins immediately. A 60-second timer starts.
+
+### Typing
+
+- A word appears in the large display area at the top
+- Type the word in the input field at the bottom
+- Press ENTER to submit
+- The next word appears automatically
+
+### Real-Time Visual Feedback
+
+- **Green letters** — you typed them correctly
+- **Red letters with underline** — you typed them incorrectly
+- **Blue highlight** — shows your current cursor position
+- **Gray letters** — characters you haven't typed yet
+
+### Scoring
+
+- Correct word submitted → +1 to Correct counter
+- Wrong word submitted → +1 to Wrong counter
+- Complete as many words as possible before 60 seconds runs out
+
+### Pausing
+
+- Click **Pause** during the game to freeze the timer
+- Click **Resume** to continue
+- Maximum pause time: 60 seconds total
+
+### Exiting
+
+- Click **Exit** to leave the current game
+- A confirmation dialog will appear
+- Confirm to return to the Main Menu
+
+---
+
+## 5. Understanding Your Results
+
+After 60 seconds, the Result screen shows:
+
+| Stat | Description |
+|------|-------------|
+| Difficulty | Which mode you played |
+| Words Typed | Total words attempted |
+| Correct Words | Words typed perfectly |
+| Accuracy | Percentage of correct characters |
+| Net WPM | Words Per Minute (standard formula) |
+| Time Used | Total time spent (usually 60s) |
+| Rating | Performance tier |
+| Consistency | Stability of your performance |
+| Rewards | XP and coins earned this game |
+
+### Rating Tiers
+
+| Rating | How to Earn |
+|--------|-------------|
+| **NOOB** | Starting out |
+| **RISING STAR** | 20+ WPM with 75%+ accuracy, OR complete 25+ words |
+| **CHALLENGER** | 35+ WPM with 85%+ accuracy, OR complete 35+ words |
+| **LEGEND** | 55+ WPM with 92%+ accuracy, OR complete all 40 words |
+
+**Streak Bonus:** Play 3+ days in a row to get a +1 tier bonus.
+
+---
+
+## 6. Features
+
+### Leaderboard
+- Access from the Main Menu
+- Shows top 50 scores, sorted highest first
+- Medals for 1st, 2nd, 3rd place
+- Refresh to reload
+- Clear All to reset (confirmation required)
+
+### Achievements
+- 14 achievements total
+- Unlocked achievements glow green
+- Each gives bonus XP
+- Examples: First Steps, Speed Demon, Perfectionist, Champion
+
+### Statistics
+- Total games played
+- Best WPM ever achieved
+- Average WPM across all games
+- Current level and total XP
+- Play streak (consecutive days)
+- Achievements unlocked
+
+### Settings
+- **Theme** — Dark, Light, or Cyberpunk
+- **Reset All Data** — deletes all progress (irreversible)
+
+---
+
+## 7. Save Files
+
+The application creates two files in the folder where you run it:
+
+| File | Contents |
+|------|----------|
+| `leaderboard.csv` | Your saved top scores |
+| `player_stats.dat` | XP, coins, achievements, streak, theme |
+
+These files persist between sessions. To back up, copy both files.
+To reset everything, delete both files or use Settings → Reset.
+
+---
+
+## 8. Tips for Better Scores
+
+1. **Accuracy first, speed second** — wrong letters cost points
+2. **Keep a steady rhythm** — pauses in typing lower your WPM
+3. **Use all your fingers** — touch typing is faster than hunting
+4. **Practice daily** — streak bonuses add up
+5. **Start with Easy** — build confidence before moving up
+6. **Don't look at your hands** — watch the screen
+7. **Take breaks** — fatigue lowers accuracy
+
+---
+
+## 9. Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| JAR won't open on double-click | Right-click → Open with → Java Platform SE Binary |
+| "java is not recognized" | Install Java 11+ from oracle.com or adoptium.net |
+| "Could not find main class" | Rebuild the JAR with clean and build |
+| Leaderboard won't save | Check the folder is not read-only |
+| App feels slow | Close other apps, restart the computer |
+| Fonts look strange | Update Java to the latest version |
+| Save files missing | Make sure you're looking in the folder where you run the JAR |
+
+---
+
+## 10. Keyboard Shortcuts
+
+| Key | Action |
+|-----|--------|
+| ENTER | Submit current word |
+| TAB | Move focus to input field |
+
+---
+
+## 11. Contact
+
+**Author:** Rafiza Mimma
+**ID:** 11240321848
+**Section:** 4B
+**Institution:** Northern University of Business & Technology, Khulna
+**Course:** CSE 2216 — Software Development I
+
+---
+
+## 12. Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0 | [Today's Date] | Initial release for Week 10 submission |
+
+---
+
+*Thank you for using Typing Speed Test!*
